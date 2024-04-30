@@ -1,0 +1,22 @@
+<div>
+    <div>
+        <img [src]="user.photo" [alt]="user.name + user.firstName" />
+    </div>
+    <div>
+        <h2>
+            <label for="name">Nom : {{user.name}}</label>
+        </h2>
+        <h2>
+            <label for="firstName">Prénom : {{user.firstName}}</label>
+        </h2>
+        <div class="quote_wrapper">
+            <label for="quote">{{user.quote}}</label>
+            <input type="text" [(ngModel)]="user.quote">
+        </div>
+    </div>
+    <hr>
+    <h3>
+        <label [hidden]="isAgeHidden" for="age">Age : {{user.age}}</label>
+    </h3>
+    <button (click)="toggleAge()">Afficher/Masquer mon âge</button>
+</div>
